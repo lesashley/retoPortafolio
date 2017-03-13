@@ -1,0 +1,67 @@
+body{
+  background: white;
+}
+.conteiner{
+   width: 1080px;
+    margin: auto;
+    background: white;
+    color: black;
+    padding: 20px 15px 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+#lash {
+    float: top;
+    font-size: 2ex;
+    font-weight: bold;
+    /*color: black;*/
+}
+
+
+#lash ul{
+    margin-left: 40px;
+}
+
+#lash li{
+    list-style-type: none;
+    float: right;
+    text-align: center;
+    /*text-decoration-color: black;*/
+    margin: 0px 29px 0px -20px;
+    background: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 2px solid black;
+    border-bottom: black;
+    padding: 0px 10px 0px 10px;
+}
+
+#lash a:link{
+    /*font: "candara";*/
+    text-decoration: none;
+    color: black;
+}
+
+#lashConteiner{
+    clear: both;
+    background: white;
+    padding: 20px 0px 20px 20px;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border: 2px solid gray;
+    width: 1025px;
+}
+
+#zlash1{
+  zlash1.style.display: "none";
+}
+#zlash2{
+  zlash2.style.display: "none";
+}
+#zlash3{
+  zlash3.style.display: "none";
+}
+#zlash4{
+  zlash4.style.display: "block";
+}
