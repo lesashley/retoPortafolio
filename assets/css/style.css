@@ -44,8 +44,8 @@ body{
     /*text-decoration-color: black;*/
     margin: 0px 29px 0px -20px;
     background: white;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     border: 2px solid black;
     border-bottom: black;
     padding: 0px 10px 0px 10px;
@@ -66,8 +66,32 @@ body{
     border: 2px solid gray;
     width: 1025px;
 }
-/*hr.v{
-  width: 1px;
-  height: 500px;
-  float: right;
+/*
+.circulo{
+    border-radius:50%;
+    width: 35px;
+    height: 35px;
+    background: gray;
 }*/
+
+div.n1{
+    background: #acff9e;
+		border: 1px solid black;
+    border-radius:15px;
+}
+
+div.n2{
+    background: #f0f280;
+		border: 1px solid black;
+    border-radius:15px;
+}
+div.n3{
+  background: #f0f280;
+		border: 1px solid black;
+    border-radius:15px;
+}
+div.n4{
+    background: #acff9e;
+		border: 1px solid black;
+    border-radius:15px;
+}
