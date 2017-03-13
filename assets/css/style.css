@@ -1,3 +1,17 @@
+#zlash1{
+  display: block;
+}
+#zlash2{
+  display: none;
+}
+#zlash3{
+  display: none;
+}
+#zlash4{
+  display: none;
+}
+
+
 body{
   background: white;
 }
@@ -52,16 +66,8 @@ body{
     border: 2px solid gray;
     width: 1025px;
 }
-
-#zlash1{
-  zlash1.style.display: "none";
-}
-#zlash2{
-  zlash2.style.display: "none";
-}
-#zlash3{
-  zlash3.style.display: "none";
-}
-#zlash4{
-  zlash4.style.display: "block";
-}
+/*hr.v{
+  width: 1px;
+  height: 500px;
+  float: right;
+}*/
