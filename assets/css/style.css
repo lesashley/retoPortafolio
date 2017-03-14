@@ -136,12 +136,9 @@ div.n1{
     background: #acff9e;
 		border: 2px solid gray;
     border-radius:15px;
-<<<<<<< HEAD
     padding: 10 10 10 10;
-=======
     width: 700px;
->>>>>>> 6e903fcba51683c7b02517453faf872c11a1a16f
-}
+
 
 div.n2{
     background: #f0f280;
@@ -149,12 +146,6 @@ div.n2{
     border-radius:15px;
     width: 700px;
 }
-<<<<<<< HEAD
-div.n4{
-    background: #acff9e;
-		border: 1px solid black;
-    border-radius:15px;
-=======
 /*div.botonesSuperiores{
   background: gray;
 }*/
@@ -162,4 +153,3 @@ div.n4{
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
->>>>>>> 6e903fcba51683c7b02517453faf872c11a1a16f
