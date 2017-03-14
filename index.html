@@ -33,21 +33,23 @@
           Pestaña2
         </div>
         <div id="zlash3" name="pestana">
-          <button type="button" name="button" id="all3">All</button>
-          <button type="button" name="button" id="physical3">Physical</button>
-          <button type="button" name="button" id="virtual3">Virtual</button><br><br>
+          <div class="botonesSuperiores">
+            <button type="button" class="boton" id="all3">All</button>
+            <button type="button" class="boton" id="physical3">Physical</button>
+            <button type="button" class="boton" id="virtual3">Virtual</button><br><br>
+          </div>
           <div class="n1" >
             <div class="figura" >
               <span class="circulo"></span>
             </div>
             <div class="texto">
-              <span><strong>bjstdmngbgr02.thoughtworks.com</strong> | Idle | 192.168.1.2 | /var/lib/cruise-agent</span><br><br>
+              <span><strong>bjstdmngbgr02.thoughtworks.com</strong> | Idle| 192.168.1.2 |/var/lib/cruise-agent</span><br>
               <!-- <button type="button" name="button"id="enviar">Enviar</button> -->
               <a href="javascript:click();">+Specify Resources</a>
               <span id="resultado"></span>
             </div>
           </div><br>
-          <div class="n1" >
+          <div class="n2" >
             <table cellpadding="3" cellspacing="0" frame="void">
               <tr>
                 <td><span class="circulo"></span></td>
@@ -60,7 +62,7 @@
             <span>&emsp;&emsp;&emsp;+</span><a href="javascript:click();">Specify Resources</a>
             <span id="resultado"></span>
           </div><br>
-          <div class="n1">
+          <div class="n2">
             <table cellpadding="3" cellspacing="0" frame="void">
               <tr>
                 <td><span class="circulo"></td>
@@ -69,7 +71,7 @@
                 <td>192.168.1.2|</td>
                 <td>/var/lib/cruise-agent</td>
               </tr>
-            </table> <br>
+            </table>
             <a href="javascript:click();">Specify Resources</a>
           </div><br>
           <div class="n1">
@@ -81,14 +83,21 @@
                 <td>192.168.1.2</td>
                 <td>/var/lib/cruise-agent</td>
               </tr>
-            </table> <br>
+            </table>
             <a href="javascript:click();">Specify Resources</a>
           </div>
         </div>
         <div id="zlash4" name="pestana">
           pestaña4
         </div>
-        <div id="lateral" >
+        <div id="lateral">
+          <h3>Summary</h3>
+          <hr>
+          <div>Building&emsp;&emsp;<span id="building"></span></div>
+          <div>Idle&emsp;&emsp;&emsp;&emsp;<span id="idle"></span></div>
+          <br>
+          <h3>History</h3>
+          <hr>
         </div>
       </div>
     </div>

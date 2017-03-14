@@ -13,8 +13,7 @@ function pestana(tab_id) {//funcion tab que recibe el parametro del id
 //   window.open("popup.html","","width=300,height=150,status=no,directories=no,toolbar=no,menubar=no,scrollbars=no,location=0,resizable=no,titlebar=no");
 // }
 
-
-function Dashboard(){
+function Agents(){
   this.contenido =[];
   this.agregarContenido = function(contenido) {
     this.contenido.push(contenido);};
@@ -57,7 +56,7 @@ function Dashboard(){
 	  return texto;
 	}
 
-var dashboard = new Dashboard();
+var agents = new Agents();
 var resultado = document.getElementById("resultado");
 //datoNuevo = document.getElementById("nuevo");
 var bot = document.getElementById("enviar");
@@ -67,7 +66,12 @@ function click(){
 	var dato = t.split(",");
 	console.log(dato[0]);
 	dato.forEach(function(e) {
-		dashboard.agregarContenido(e);
+		agents.agregarContenido(e);
 		resultado.appendChild(crearContenido(e,"n01"));
 	})
 }
+
+var building = document.getElementById("building");
+var idle = document.getElementById("idle");
+building.innerHTML=document.getElementsByClassName("n1").length;
+idle.innerHTML=document.getElementsByClassName("n2").length;
