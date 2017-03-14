@@ -65,11 +65,9 @@ var bot = document.getElementById("enviar");
 function click(){
 	var t = prompt("Ingrese un dato").toString();
 	var dato = t.split(",");
-	//alert(typeof(t));
 	console.log(dato[0]);
 	dato.forEach(function(e) {
 		dashboard.agregarContenido(e);
 		resultado.appendChild(crearContenido(e,"n01"));
 	})
-
 }
