@@ -95,27 +95,32 @@ body{
 }
 
 span.circulo{
-  display: block;
-  width: 50px;
-  height: 50px;
+  display:block;
+  width: 30px;
+  height: 30px;
   background: gray;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   border-radius: 40px;
 }
 
-/*
-span.circulo{
-    border-radius:50%;
-    width: 35px;
-    height: 35px;
-    background: gray;
-}*/
+.alinear{
+  display: inline-block;
 
+}
+
+#divcirculo{
+
+  vertical-align: baseline;
+}
+#divdato{
+    vertical-align: baseline;
+}
 div.n1{
     background: #acff9e;
 		border: 1px solid black;
     border-radius:15px;
+    padding: 10 10 10 10;
 }
 
 div.n2{
@@ -132,4 +137,3 @@ div.n4{
     background: #acff9e;
 		border: 1px solid black;
     border-radius:15px;
-}
