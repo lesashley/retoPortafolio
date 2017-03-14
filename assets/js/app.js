@@ -17,39 +17,31 @@ function Agents(){
   this.contenido =[];
   this.agregarContenido = function(contenido) {
     this.contenido.push(contenido);};
-	// this.contenidoHTML = function (parent) {
-	// 	parent.innerHTML ="";
-	// 	this.contenido.forEach(function(contenido) {
-	// 		parent.appendChild(this.crearHTMLContenido(contenido));
-	// 	});};
-	// this.crearHTMLContenido = function(contenido, id) {
-	// 	//var post = document.createElement('div');
-	//   var texto = document.createElement('div');
-	// 	texto.setAttribute('data-id',id);
-	// 	var span = document.createElement('span');
-	// 	span.innerHTML=contenido;
-	// 	var eliminar = document.createElement('button');
-	//   //eliminar.setAttribute('href', "#");
-	//   eliminar.innerHTML = "x";
-	//
-	// 	texto.appendChild(span);
-	// 	texto.appendChild(eliminar);
-	//   return texto;
-	// };
-
+	this.quitarContenido = function(contenido) {
+		this.contenido.splice(contenido,1);};
 	}
+	var cont = 1;
 	function crearContenido(contenido,id) {
 		var texto = document.createElement('span');
 		texto.setAttribute('data-id',id);
 		var span = document.createElement('span');
+		span.setAttribute("id","sp"+cont);
+		var n = cont
+		cont++;
+
 		span.innerHTML=contenido;
 		var eliminar = document.createElement('button');
+		eliminar.setAttribute("class","botones");
 	  eliminar.innerHTML = "x";
 		eliminar.addEventListener("click",function(e) {
 			var postParent = e.target.parentNode;
+			//var span1 = e.target.getAttribute("id");
+			//alert(span1);
 			//var postParent = e.target.parentNode.getAttribute('data-id');obtienes el id
+			var indice = n-1;
 			postParent.removeChild(span);
 			postParent.removeChild(eliminar);
+			agents.quitarContenido(indice);
 		})
 		texto.appendChild(span);
 		texto.appendChild(eliminar);

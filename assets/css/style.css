@@ -128,15 +128,20 @@ span.circulo{
 }*/
 
 div.n1{
-    background: #acff9e;
-		border: 2px solid gray;
+    padding: 5px;
+    /*background: #acff9e;*/
+    background: #b4ffaa;
+		border: 3px solid gray;
     border-radius:15px;
     width: 700px;
+
 }
 
 div.n2{
-    background: #f0f280;
-		border: 2px solid gray;
+  padding: 5px;
+    background: #f8ffaf;
+
+		border: 3px solid gray;
     border-radius:15px;
     width: 700px;
 }
@@ -144,6 +149,27 @@ div.n2{
   background: gray;
 }*/
 .boton{
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  background: #a0a39e;
+  /*padding: 5px;*/
+  margin: 3px;
+  border-radius: 13px 13px 13px 13px;
+  border-color: black;
+  padding-left: 18px;
+  padding-right: 18px;
+  /*margin-left: 5px;*/
+  /*margin-right: 5px;*/
+  height: 40px;
+}
+
+.botones{
+  font-family: 'Poppins', sans-serif;
+  background: #cccccc;
+  border-radius: 6px 6px 6px 6px;
+  height: 25px;
+  font-weight: 900;
+  font-size: 15px;
+
 }
