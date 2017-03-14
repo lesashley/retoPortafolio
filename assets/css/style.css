@@ -1,11 +1,13 @@
 #zlash1{
   display: block;
+
 }
 #zlash2{
   display: none;
 }
 #zlash3{
   display: none;
+  width: 1000px;
 }
 #zlash4{
   display: none;
@@ -74,7 +76,9 @@ span.circulo{
   -moz-border-radius: 40px;
   border-radius: 40px;
 }
-
+body{
+  font-family: 'Poppins', sans-serif;
+}
 /*
 span.circulo{
     border-radius:50%;

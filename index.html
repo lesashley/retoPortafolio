@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
-    <font face="candara">
     <div class="conteiner">
       <div class=""><h1>Cruise</h1></div>
       <div class="" id="lash">
@@ -24,49 +24,7 @@
           <button type="button" name="button" id="all1">All</button>
           <button type="button" name="button" id="physical1">Physical</button>
           <button type="button" name="button" id="virtual1">Virtual</button><br><br>
-          <div class="n1" >
-            <div class="figura" >
-              <span class="circulo"></span>
-            </div>
-            <div class="texto">
-              <span><strong>bjstdmngbgr01.thoughtworks.com</strong> | Idle | 192.168.1.2 | /var/lib/cruise-agent</span><br><br>
-              <a href="#" onclick="javascript:popup();return false;">Specify Resources|</a>
-            </div>
-          </div><br>
-          <div class="n2" >
-            <table cellpadding="3" cellspacing="0" frame="void">
-              <tr>
-                <td><span class="circulo"></span></td>
-                <td><strong>bjstdmngbgr02.thoughtworks.com</strong></td>
-                <td>Building</td>
-                <td>192.168.1.2</td>
-                <td>/var/lib/cruise-agent</td>
-              </tr>
-            </table> <br>
-            <a href="#">Specify Resources|</a>
-          </div><br>
-          <div class="n3">
-            <table cellpadding="3" cellspacing="0" rules="cols" frame="void">
-              <tr>
-                <td><strong>bjstdmngbgr03.thoughtworks.com</strong></td>
-                <td>Building</td>
-                <td>192.168.1.2</td>
-                <td>/var/lib/cruise-agent</td>
-              </tr>
-            </table> <br>
-            <a href="#">Specify Resources|</a>
-          </div><br>
-          <div class="n4">
-            <table cellpadding="3" cellspacing="0" rules="cols" frame="void">
-              <tr>
-                <td><strong>bjstdmngbgr04.thoughtworks.com</strong></td>
-                <td>Idle</td>
-                <td>192.168.1.2</td>
-                <td>/var/lib/cruise-agent</td>
-              </tr>
-            </table> <br>
-            <a href="#">Specify Resources|</a>
-          </div>
+
         </div>
         <div id="zlash2" name="pestana">
           <button type="button" name="button" id="all2">All</button>
@@ -78,14 +36,58 @@
           <button type="button" name="button" id="all3">All</button>
           <button type="button" name="button" id="physical3">Physical</button>
           <button type="button" name="button" id="virtual3">Virtual</button><br><br>
-          pestaña3
+          <div class="n1" >
+            <div class="figura" >
+              <span class="circulo"></span>
+            </div>
+            <div class="texto">
+              <span><strong>bjstdmngbgr02.thoughtworks.com</strong> | Idle | 192.168.1.2 | /var/lib/cruise-agent</span><br><br>
+              <!-- <button type="button" name="button"id="enviar">Enviar</button> -->
+              <a href="javascript:click();">+Specify Resources</a>
+              <span id="resultado"></span>
+            </div>
+          </div><br>
+          <div class="n2" >
+            <table cellpadding="3" cellspacing="0" frame="void">
+              <tr>
+                <td><span class="circulo"></span></td>
+                <td><strong>bjstdmngbgr03.thoughtworks.com</strong>|</td>
+                <td>Building|</td>
+                <td>192.168.1.2|</td>
+                <td>/var/lib/cruise-agent</td>
+              </tr>
+            </table>
+            <span>&emsp;&emsp;&emsp;+</span><a href="javascript:click();">Specify Resources</a>
+            <span id="resultado"></span>
+          </div><br>
+          <div class="n3">
+            <table cellpadding="3" cellspacing="0" rules="cols" frame="void">
+              <tr>
+                <td><strong>bjstdmngbgr04.thoughtworks.com|</strong></td>
+                <td>Building|</td>
+                <td>192.168.1.2|</td>
+                <td>/var/lib/cruise-agent</td>
+              </tr>
+            </table> <br>
+            <a href="javascript:click();">Specify Resources</a>
+          </div><br>
+          <div class="n4">
+            <table cellpadding="3" cellspacing="0" rules="cols" frame="void">
+              <tr>
+                <td><strong>bjstdmngbgr05.thoughtworks.com</strong></td>
+                <td>Idle</td>
+                <td>192.168.1.2</td>
+                <td>/var/lib/cruise-agent</td>
+              </tr>
+            </table> <br>
+            <a href="javascript:click();">Specify Resources</a>
+          </div>
         </div>
         <div id="zlash4" name="pestana">
           pestaña4
         </div>
       </div>
     </div>
-    </font>
     <script src ="assets/js/app.js"></script>
   </body>
 </html>
