@@ -1,21 +1,26 @@
 #zlash1{
-  display: inline-block;
+  display: none;
   width: 65%;
   vertical-align: top;
   padding-top: 40px;
   padding-left: 5%;
 
 }
+/*#n1{
+
+}*/
 #zlash2{
   display: none;
   width: 65%;
+  /*width: 1000px*/
   vertical-align: top;
   padding-top: 40px;
   padding-left: 5%;
 
 }
 #zlash3{
-  display: none;
+  display: inline-block;
+  /*width: 1000px;*/
   width: 65%;
   vertical-align: top;
   padding-top: 40px;
@@ -36,7 +41,7 @@ body{
   background: white;
 }
 .conteiner{
-   width: 1080px;
+   width: 1180px;
     margin: auto;
     background: white;
     color: black;
@@ -44,16 +49,20 @@ body{
     border-radius: 10px;
     box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
     vertical-align: middle;
+    height: 750px;
+
+    /*border: 3px solid black;*/
 }
 
 #lash {
     font-size: 2ex;
     font-weight: bold;
-    /*color: black;*/
+
 }
 
 #lash ul{
     margin-left: 40px;
+
 }
 
 #lash li{
@@ -64,13 +73,12 @@ body{
     background: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border: 2px solid black;
+    border: 3px solid black;
     border-bottom: black;
     padding: 0px 10px 0px 10px;
 }
 
 #lash a:link{
-    /*font: "candara";*/
     text-decoration: none;
     color: black;
 }
@@ -81,17 +89,22 @@ body{
     border-radius: 2px;
     border-top-left-radius: 2px;
     border: 2px solid gray;
-    width: 1024;
+    width: 1150px;
+    border: 3px solid black;
+    height: 600px;
 }
 
 #lateral{
-  width: 29%;
-  height: 100vh;
+  padding: 10px;
+  /*margin: 10px;*/
+  width: 27%;
+  height: 78vh;
   display: inline-block;
   background: white;
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   border-top-left-radius: 2px;
-  border: 2px solid gray;
+  border: 3px solid darkgray;
+  /*margin: 0px 9px 0px -10px;*/
 }
 
 span.circulo{
@@ -108,6 +121,9 @@ span.circulo{
   display: inline-block;
 
 }
+body{
+  font-family: 'Poppins', sans-serif;
+}
 
 #divcirculo{
 
@@ -118,22 +134,32 @@ span.circulo{
 }
 div.n1{
     background: #acff9e;
-		border: 1px solid black;
+		border: 2px solid gray;
     border-radius:15px;
+<<<<<<< HEAD
     padding: 10 10 10 10;
+=======
+    width: 700px;
+>>>>>>> 6e903fcba51683c7b02517453faf872c11a1a16f
 }
 
 div.n2{
     background: #f0f280;
-		border: 1px solid black;
+		border: 2px solid gray;
     border-radius:15px;
+    width: 700px;
 }
-div.n3{
-  background: #f0f280;
-		border: 1px solid black;
-    border-radius:15px;
-}
+<<<<<<< HEAD
 div.n4{
     background: #acff9e;
 		border: 1px solid black;
     border-radius:15px;
+=======
+/*div.botonesSuperiores{
+  background: gray;
+}*/
+.boton{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+>>>>>>> 6e903fcba51683c7b02517453faf872c11a1a16f
