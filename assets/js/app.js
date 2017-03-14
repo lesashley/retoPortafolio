@@ -9,3 +9,19 @@ function pestana(tab_id) {//funcion tab que recibe el parametro del id
 			}
 		}
 	}
+function popup(){
+  window.open("popup.html","","width=300,height=150,status=no,directories=no,toolbar=no,menubar=no,scrollbars=no,location=0,resizable=no,titlebar=no");
+}
+
+//datoNuevo = document.getElementById("nuevo").value;
+//datoNuevo.split(",");
+
+
+function Dashboard(){
+  this.contenido =[];
+  this.agregarContenido = function(contenido) {
+    this.contenido.push(contenido);};
+  }
+  // this.creandoElementos=function (text,i) {
+  //
+  // }
