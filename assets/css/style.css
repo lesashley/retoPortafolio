@@ -6,9 +6,6 @@
   padding-left: 5%;
 
 }
-/*#n1{
-
-}*/
 #zlash2{
   display: none;
   width: 65%;
@@ -35,7 +32,18 @@
   padding-left: 5%;
 
 }
-
+div.figura{
+  width: 1px;
+  float: left;
+  padding: 5px;
+  /*margin: 5px;*/
+}
+div.texto{
+  width: 630px;
+  float: right;
+  /*margin: 5px;*/
+  padding: 5px;
+}
 
 body{
   background: white;
@@ -134,13 +142,14 @@ div.n1{
 		border: 3px solid gray;
     border-radius:15px;
     width: 700px;
+    height: 60px;
 
 }
 
 div.n2{
-  padding: 5px;
+    padding: 5px;
     background: #f8ffaf;
-
+    height: 60px;
 		border: 3px solid gray;
     border-radius:15px;
     width: 700px;
