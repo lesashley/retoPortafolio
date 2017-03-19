@@ -6,9 +6,6 @@
   padding-left: 5%;
 
 }
-/*#n1{
-
-}*/
 #zlash2{
   display: none;
   width: 65%;
@@ -35,7 +32,18 @@
   padding-left: 5%;
 
 }
-
+span.figura{
+  width: 1px;
+  float: left;
+  padding: 5px;
+  /*margin: 5px;*/
+}
+.texto{
+  width: 640px;
+  float: right;
+  /*margin: 5px;*/
+  padding: 5px;
+}
 
 body{
   background: white;
@@ -95,10 +103,11 @@ body{
 }
 
 #lateral{
+  float: right;
   padding: 10px;
   /*margin: 10px;*/
-  width: 27%;
-  height: 78vh;
+  width: 300px;
+  height: 62vh;
   display: inline-block;
   background: white;
   /*border-radius: 2px;*/
@@ -108,48 +117,86 @@ body{
 }
 
 span.circulo{
-  display:block;
-  width: 30px;
-  height: 30px;
+  display: block;
+  width: 50px;
+  height: 50px;
   background: gray;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   border-radius: 40px;
 }
-
-.alinear{
-  display: inline-block;
-
-}
 body{
   font-family: 'Poppins', sans-serif;
 }
 
-#divcirculo{
 
-  vertical-align: baseline;
-}
-#divdato{
-    vertical-align: baseline;
-}
-div.n1{
-    background: #acff9e;
-		border: 2px solid gray;
+div.Idle{
+    padding: 5px;
+    /*background: #acff9e;*/
+    background: #b4ffaa;
+		border: 3px solid gray;
     border-radius:15px;
-    padding: 10 10 10 10;
-    width: 700px;
+    width: 710px;
+    height: 60px;
+    margin: 10px;
+}
 
-
-div.n2{
-    background: #f0f280;
-		border: 2px solid gray;
+div.Building{
+    padding: 5px;
+    background: #f8ffaf;
+    height: 60px;
+		border: 3px solid gray;
     border-radius:15px;
-    width: 700px;
+    width: 710px;
+    margin: 10px;
 }
 /*div.botonesSuperiores{
   background: gray;
 }*/
 .boton{
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  background: #a0a39e;
+  /*padding: 5px;*/
+  margin: 3px;
+  border-radius: 13px 13px 13px 13px;
+  border-color: black;
+  padding-left: 18px;
+  padding-right: 18px;
+  /*margin-left: 5px;*/
+  /*margin-right: 5px;*/
+  height: 40px;
+}
+
+.botones{
+  font-family: 'Poppins', sans-serif;
+  background: #cccccc;
+  border-radius: 6px 6px 6px 6px;
+  height: 25px;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.contRecurso{
+  margin: 8px;
+}
+.signed{
+  float: right;
+}
+.derecha{
+  width : 20px;
+  height : 20px;
+  font-size : 1px;
+  border-style : solid;
+  border-top-color : #fff;
+  border-left-color : #000;
+  border-right-color : #fff;
+  border-bottom-color : #fff;
+  border-top-width : 10px;
+  border-left-width : 20px;
+  border-right-width : 10px;
+  border-bottom-width : 10px;
+  background-color : #000;
+  padding : 0;
 }
