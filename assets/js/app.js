@@ -35,11 +35,16 @@ function Agent() {
 }
 
 var agentes = new Agent();
-agentes.addAgentes("bjstdmngbgr02.thoughtworks.com","Idle","192.168.1.2","/var/lib/cruise-agent");
-agentes.addAgentes("bjstdmngbgr03.thoughtworks.com","Building","192.168.1.3","/var/lib/cruise-agent");
-agentes.addAgentes("bjstdmngbgr04.thoughtworks.com","Building","192.168.1.4","/var/lib/cruise-agent");
-agentes.addAgentes("bjstdmngbgr05.thoughtworks.com","Idle","192.168.1.5","/var/lib/cruise-agent");
+agentes.addAgentes("bjstdmngbgr02.thoughtworks.com","Idle","192.168.1.2","/var/lib/cruise-agent",["ubuntu","firefox3","core-duo"]);
+agentes.addAgentes("bjstdmngbgr03.thoughtworks.com","Building","192.168.1.3","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
+agentes.addAgentes("bjstdmngbgr04.thoughtworks.com","Building","192.168.1.4","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
+agentes.addAgentes("bjstdmngbgr05.thoughtworks.com","Idle","192.168.1.5","/var/lib/cruise-agent",["ubuntu"]);
 
+//agregando recursos
+// agentes.addResource(0,"ubuntu","firefox3","core-duo");
+// agentes.addResource(1,"ubuntu,firefox3,mysql,core-duo");
+// agentes.addResource(2,"ubuntu,firefox3,mysql,core-duo");
+// agentes.addResource(3,"ubuntu");
 var idRes = 0;
 var sp = 0;
 var mostrar = document.getElementById("zlash3");
@@ -98,6 +103,8 @@ function crearContenido(contenido,id) {
   texto.appendChild(eliminar);
   return texto;
 }
+
+
 
 function click(id){
    var resultado = document.getElementById("resultado" + id);
