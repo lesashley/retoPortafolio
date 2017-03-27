@@ -1,17 +1,3 @@
-function pestana(tab_id) {//funcion tab que recibe el parametro del id
-	var tab_contenido = document.getElementsByName("pestana");//definimos el elemento que sera devuelto
-		for(var i=0; i<tab_contenido.length; i++) {//almacenamos los elementos divs
-				if (tab_contenido[i].id == tab_id) {//comparamos el numero de contenido
-				tab_contenido[i].style.display = 'inline-block';//mostramos el contenido correspondiente
-			}else {
-				tab_contenido[i].style.display = 'none';//ocultamos los otros contenidos.
-			}
-		}
-	}
-// function popup(){
-//   window.open("popup.html","","width=300,height=150,status=no,directories=no,toolbar=no,menubar=no,scrollbars=no,location=0,resizable=no,titlebar=no");
-// }
-
 var nuevoArray;
 var arrayAgentes = [];
 function Agent() {
@@ -33,8 +19,7 @@ function Agent() {
   };
   this.removeResource = function (indice,recurso) {
     var rec = nuevoArray[indice].resources.indexOf(recurso);
-		alert(rec);
-    nuevoArray[indice].resources.splice(rec,1);
+		nuevoArray[indice].resources.splice(rec,1);
 		localStorage.setItem('Agentes',JSON.stringify(nuevoArray));
   };
 }
@@ -52,10 +37,11 @@ if (!localStorage.getItem("Agentes")) {
 	nuevoArray = JSON.parse(localStorage.getItem("Agentes"));
 }
 
+var idTooltip = 0;
 var idRes = 0;
 var sp = 0;
 var mostrar = document.getElementById("zlash3");
-function crearElementos() {
+function createElements() {
     nuevoArray.forEach(function(e) {
     var panel = document.createElement('div');
     panel.setAttribute('class',e.type);
@@ -70,9 +56,27 @@ function crearElementos() {
     var espacio = document.createElement("br");
     var a = document.createElement('a');
     a.setAttribute("id","sr"+sp);
-    a.setAttribute("href","javascript:click("+sp+");");
+    a.setAttribute("href","javascript:showTooltip("+sp+");");
+		a.setAttribute("class","tooltip");
     sp++;
     a.innerHTML="+"+"Specify Resources";
+		//Tooltip
+		var tooltip = document.createElement("span");
+		tooltip.setAttribute("class","tooltiptext");
+		tooltip.setAttribute("id","span"+idTooltip);
+		var input = document.createElement("input");
+		input.setAttribute("type","text");
+		input.setAttribute("id","txt"+idTooltip);
+		var addButton = document.createElement("button");
+		addButton.setAttribute("class","rounded");
+		addButton.setAttribute("id","agregar"+idTooltip);
+		addButton.setAttribute("onclick","addResource("+idTooltip+")");
+		addButton.innerHTML="Add resources";
+		var closeButton = document.createElement("button");
+		closeButton.setAttribute("class","rounded");
+		closeButton.setAttribute("id","cerrar"+idTooltip);
+		closeButton.innerHTML = "Close";
+		idTooltip++;
     var conteinerRes = document.createElement('span');
     conteinerRes.setAttribute("id","resultado" + idRes);
     idRes++;
@@ -84,6 +88,10 @@ function crearElementos() {
     conteiner.appendChild(espacio);
     conteiner.appendChild(a);
     conteiner.appendChild(conteinerRes);
+		a.appendChild(tooltip);
+		tooltip.appendChild(input);
+		tooltip.appendChild(addButton);
+		tooltip.appendChild(closeButton);
 		var numAgent = e.id;
 		e.resources.forEach(function(i) {
 			var resource = document.createElement('span');
@@ -109,9 +117,9 @@ function crearElementos() {
 		});
   })
 }
-crearElementos();
+createElements();
 
-function crearContenido(contenido,id) {
+function createResources(contenido,id) {
   var resource = document.createElement('span');
   resource.setAttribute('data-id',"contRecurso");
 	resource.setAttribute("class","contRecurso");
@@ -131,24 +139,32 @@ function crearContenido(contenido,id) {
   })
   resource.appendChild(span);
   resource.appendChild(deleteResource);
-  return recurso;
+  return resource;
 }
 
-function click(id){
-   var resultado = document.getElementById("resultado" + id);
-	 var t = prompt("Ingrese un dato").toString();
-   if(t == ""){
-      alert("Debe ingresar un recurso válido");
-   } else {
-     var dato = t.split(",");
-     dato.forEach(function(e) {
-       agentes.addResource(id,e);
-       resultado.appendChild(crearContenido(e,id));
-     });
-   }
+function showTooltip(id){
+	//Abre el tooltip
+	var add = document.getElementById("agregar"+id);
+	var idEnlace = document.getElementById("sr"+id);
+	var span = document.getElementById('span'+id);
+	idEnlace.style.visibility="visible";
+	span.style.visibility="visible";
 }
-//Muestra en sumary
-var building = document.getElementById("building");
-var idle = document.getElementById("idle");
-building.innerHTML=document.getElementsByClassName("Building").length;
-idle.innerHTML=document.getElementsByClassName("Idle").length;
+
+function addResource(id) {
+	var idEnlace = document.getElementById("sr"+id);
+	var span = document.getElementById('span'+id);
+	var resultado = document.getElementById("resultado" + id);
+	var text = document.getElementById("txt"+id).value;
+	if (text == "") {
+		alert("Debe ingresar mínimo un recurso");
+	} else {
+		var data = text.split(",");
+		data.forEach(function (e) {
+			agentes.addResource(id,e);
+			resultado.appendChild(createResources(e,id));
+		});
+	}
+	idEnlace.style.visibility="hidden";
+	span.style.visibility="hidden";
+}

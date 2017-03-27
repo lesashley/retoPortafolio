@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="main.css">
-  <title>Document</title>
-</head>
-<body>
-  <a href="#" id="link" class="tooltip">Hover over me
-    <span id="span" class="tooltiptext"> (separate multiple resources name with commas)
-      <br>
-      <input type="text" id="txtresource" >
-      <br>
-      <button type="button" name="button" class="rounded">Aceptar</button>
-      <button type="button" name="button" class="rounded">Cancelar</button>
-    </span>
-
-  </a>
-  <script type="text/javascript" src="main.js">
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#" id="link" class="tooltip" onclick="abrir();">Hover over me
+      <div id="span" class="tooltiptext"> (separate multiple resources name with commas)
+        <br>
+        <input type="text" id="txtresource" >
+        <br>
+        <button type="button" name="button" class="rounded" id="b1" onclick="cerrar();">add</button>
+        <button type="button" name="button" class="rounded" id="b2" onclick="cerrar();">close</button>
+      </div>
+    </a>
+    <script type="text/javascript" src="main.js">
+    </script>
+  </body>
 </html>
