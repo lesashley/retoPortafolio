@@ -12,6 +12,7 @@ function pestana(tab_id) {//funcion tab que recibe el parametro del id
 //   window.open("popup.html","","width=300,height=150,status=no,directories=no,toolbar=no,menubar=no,scrollbars=no,location=0,resizable=no,titlebar=no");
 // }
 
+var nuevoArray;
 var arrayAgentes = [];
 function Agent() {
   this.id = 0;
@@ -44,6 +45,12 @@ agentes.addAgentes("bjstdmngbgr02.thoughtworks.com","Idle","192.168.1.2","/var/l
 agentes.addAgentes("bjstdmngbgr03.thoughtworks.com","Building","192.168.1.3","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
 agentes.addAgentes("bjstdmngbgr04.thoughtworks.com","Building","192.168.1.4","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
 agentes.addAgentes("bjstdmngbgr05.thoughtworks.com","Idle","192.168.1.5","/var/lib/cruise-agent",["ubuntu"]);
+if (!localStorage.getItem("Agentes")) {
+	nuevoArray = JSON.parse(localStorage.getItem("Agentes"));
+	localStorage.setItem("Agentes",JSON.stringify(arrayAgentes));
+} else {
+	nuevoArray = JSON.parse(localStorage.getItem("Agentes"));
+}
 
 var idRes = 0;
 var sp = 0;
