@@ -1,21 +1,16 @@
-function cerrar() {
-  var tooltipText = document.getElementById('span');
-  if(tooltipText.style.display == "block"){
-    tooltipText.style.display="none";
-  }
-  //tooltip.style.display="none";
-}
 
-function abrir() {
+document.getElementById("link").addEventListener("click",function() {
   var tooltipText = document.getElementById('span');
-  tooltipText.style.display="block";
-  //tool.style.display="block";
-}
-//var tooltip = document.getElementById('link');
-//var tooltipText = document.getElementById('span');
- //tooltip.addEventListener("click",function(){
- //abrir();
- //});
+  tooltipText.classList.toggle("nuevo");
+});
 
 var bagregar = document.getElementById("b1");
+bagregar.addEventListener("click",function() {
+  var tooltipText = document.getElementById('span');
+  tooltipText.classList.remove("tooltipText.nuevo");
+});
 var bcerrar = document.getElementById("b2");
+bcerrar.addEventListener("click",function() {
+  var tooltipText = document.getElementById('span');
+  tooltipText.classList.remove("tooltipText.nuevo");
+});

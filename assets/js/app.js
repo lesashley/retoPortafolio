@@ -2,7 +2,7 @@ var nuevoArray;
 var arrayAgentes = [];
 function Agent() {
   this.id = 0;
-  this.addAgentes =function(url,type,ip,ruta,resources) {
+  this.addAgentes = function(url,type,ip,ruta,resources) {
     arrayAgentes.push({
       id : this.id,
       url : url,
@@ -30,6 +30,7 @@ agentes.addAgentes("bjstdmngbgr02.thoughtworks.com","Idle","192.168.1.2","/var/l
 agentes.addAgentes("bjstdmngbgr03.thoughtworks.com","Building","192.168.1.3","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
 agentes.addAgentes("bjstdmngbgr04.thoughtworks.com","Building","192.168.1.4","/var/lib/cruise-agent",["ubuntu","firefox3","mysql","core-duo"]);
 agentes.addAgentes("bjstdmngbgr05.thoughtworks.com","Idle","192.168.1.5","/var/lib/cruise-agent",["ubuntu"]);
+
 if (!localStorage.getItem("Agentes")) {
 	nuevoArray = JSON.parse(localStorage.getItem("Agentes"));
 	localStorage.setItem("Agentes",JSON.stringify(arrayAgentes));
@@ -61,7 +62,7 @@ function createElements() {
     sp++;
     a.innerHTML="+"+"Specify Resources";
 		//Tooltip
-		var tooltip = document.createElement("span");
+		var tooltip = document.createElement("div");
 		tooltip.setAttribute("class","tooltiptext");
 		tooltip.setAttribute("id","span"+idTooltip);
 		var input = document.createElement("input");
@@ -76,6 +77,10 @@ function createElements() {
 		closeButton.setAttribute("class","rounded");
 		closeButton.setAttribute("id","cerrar"+idTooltip);
 		closeButton.innerHTML = "Close";
+    closeButton.addEventListener("click",function () {
+      //var tooltipText = document.getElementById('span');
+      tooltip.classList.remove("tooltipText.nuevo");
+    })
 		idTooltip++;
     var conteinerRes = document.createElement('span');
     conteinerRes.setAttribute("id","resultado" + idRes);
@@ -141,14 +146,12 @@ function createResources(contenido,id) {
   resource.appendChild(deleteResource);
   return resource;
 }
-
+//Abre el tooltip
 function showTooltip(id){
-	//Abre el tooltip
-	var add = document.getElementById("agregar"+id);
-	var idEnlace = document.getElementById("sr"+id);
+	var input = document.getElementById("txt"+id);
 	var span = document.getElementById('span'+id);
-	idEnlace.style.visibility="visible";
-	span.style.visibility="visible";
+	span.classList.toggle("nuevo");
+  input.focus();
 }
 
 function addResource(id) {
@@ -165,6 +168,11 @@ function addResource(id) {
 			resultado.appendChild(createResources(e,id));
 		});
 	}
-	idEnlace.style.visibility="hidden";
-	span.style.visibility="hidden";
+	var input = document.getElementById("txt"+id);
+  input.value="";
+	span.classList.remove("tooltipText.nuevo");
+}
+
+if(typeof exports !== 'undefined') {
+    exports.createResources = createResources;
 }

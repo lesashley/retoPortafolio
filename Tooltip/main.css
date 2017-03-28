@@ -4,7 +4,6 @@
     display: inline-block;
     border-bottom: 0px dotted #c6d1c6; /* If you want dots under the hoverable text */
 }
-
 .tooltiptext {
   display: none;
     background-color: #c6d1c6;
@@ -44,4 +43,8 @@
 .rounded{
   border-radius: 10px 10px 10px 10px;
   border-color: black;
+}
+
+.tooltiptext.nuevo{
+  display: block;
 }
