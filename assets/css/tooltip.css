@@ -3,8 +3,8 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted #c6d1c6;
+    color: black;
 }
-
 /* Tooltip text */
 .tooltiptext {
     font-family: 'Droid Sans', sans-serif;

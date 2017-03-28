@@ -37,9 +37,8 @@ span.figura{
   /*margin: 5px;*/
 }
 .texto{
-  width: 640px;
+  width: 690px;
   float: left;
-  /*margin: 5px;*/
   padding: 5px;
   padding-left: 7%;
 }
@@ -86,8 +85,8 @@ body{
 }
 
 #lash li:hover {
- background: #474343;
- color: black;
+ background: #606060;
+ /*color: #ffffff;*/
  /*box-shadow: inset 0 0 0 3px #474343;*/
 }
 
@@ -178,10 +177,12 @@ div.Building{
   width: 25px;
   font-weight: 900;
   font-size: 15px;
+  color: gray;
 }
 
 .contRecurso{
-  margin: 8px;
+  margin: 7px;
+  font-size: 15px;
 }
 .signed{
   float: right;
@@ -210,5 +211,5 @@ div.Building{
 }
 
 .info{
-  height: 7px;
+  height: 8px;
 }

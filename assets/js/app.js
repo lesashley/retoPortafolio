@@ -39,9 +39,8 @@ if (!localStorage.getItem("Agentes")) {
 }
 
 var idTooltip = 0;
-var idRes = 0;
-var sp = 0;
 var mostrar = document.getElementById("zlash3");
+
 function createElements() {
     nuevoArray.forEach(function(e) {
     var panel = document.createElement('div');
@@ -57,39 +56,32 @@ function createElements() {
     agent.innerHTML= e.url.bold() + " | " + e.type + " | " + e.ip + " | " + e.ruta;
     var espacio = document.createElement("br");
     var a = document.createElement('a');
-    a.setAttribute("id","sr"+sp);
-    a.setAttribute("href","javascript:showTooltip("+sp+");");
+    a.setAttribute("href","javascript:showTooltip("+idTooltip+");");
 		a.setAttribute("class","tooltip");
-    sp++;
-    a.innerHTML="+".fontcolor("black").bold()+"Specify Resources".fontcolor("black");
+    a.innerHTML="+".bold()+"Specify Resources";
 		//Tooltip
 		var tooltip = document.createElement("div");
 		tooltip.setAttribute("class","tooltiptext");
 		tooltip.setAttribute("id","span"+idTooltip);
     tooltip.innerHTML="(separate multiple resources name with commas)";
 		var input = document.createElement("input");
-		input.setAttribute("type","text");
 		input.setAttribute("id","txt"+idTooltip);
     input.setAttribute("style","width:340px");
     var btnEspacio = document.createElement("br");
 		var addButton = document.createElement("button");
 		addButton.setAttribute("class","rounded");
-		addButton.setAttribute("id","agregar"+idTooltip);
 		addButton.setAttribute("onclick","addResource("+idTooltip+")");
 		addButton.innerHTML="Add resources";
 		var closeButton = document.createElement("button");
 		closeButton.setAttribute("class","rounded");
-		closeButton.setAttribute("id","cerrar"+idTooltip);
 		closeButton.innerHTML = "Close";
     closeButton.addEventListener("click",function () {
-      //var tooltipText = document.getElementById('span');
       tooltip.classList.remove("tooltipText.nuevo");
     })
-		idTooltip++;
     var conteinerRes = document.createElement('span');
     conteinerRes.innerHTML="| Resources: ";
-    conteinerRes.setAttribute("id","resultado" + idRes);
-    idRes++;
+    conteinerRes.setAttribute("id","resultado" + idTooltip);
+    idTooltip++;
     mostrar.appendChild(panel);
     panel.appendChild(figure);
     panel.appendChild(conteiner);
@@ -106,16 +98,12 @@ function createElements() {
 		var numAgent = e.id;
 		e.resources.forEach(function(i) {
 			var resource = document.createElement('span');
-			resource.setAttribute('data-id',"contRecurso");
 			resource.setAttribute("class","contRecurso");
 			var span = document.createElement('span');
-			span.setAttribute("id","sp");
 			span.innerHTML= i;
 			var deleteResource = document.createElement('button');
 			deleteResource.setAttribute("class","botones");
-			deleteResource.setAttribute("id","b");
-			deleteResource.innerHTML = "x".fontcolor("gray");
-      //deleteResource.fontcolor("gray");
+			deleteResource.innerHTML = "x";
 			deleteResource.addEventListener("click",function(e) {
 				var postParent = e.target.parentNode;
 				postParent.removeChild(span);
@@ -133,14 +121,11 @@ createElements();
 
 function createResources(contenido,id) {
   var resource = document.createElement('span');
-  resource.setAttribute('data-id',"contRecurso");
 	resource.setAttribute("class","contRecurso");
   var span = document.createElement('span');
-  span.setAttribute("id","sp");
   span.innerHTML=contenido;
   var deleteResource = document.createElement('button');
   deleteResource.setAttribute("class","botones");
-  deleteResource.setAttribute("id","b"+id);
   deleteResource.innerHTML = "x";
   deleteResource.addEventListener("click",function(e) {
     var postParent = e.target.parentNode;
@@ -148,7 +133,7 @@ function createResources(contenido,id) {
     postParent.removeChild(deleteResource);
     postParent.parentNode.removeChild(postParent);//elimina el nodo padre
     agentes.removeResource(id,contenido);
-  })
+  });
   resource.appendChild(span);
   resource.appendChild(deleteResource);
   return resource;
@@ -179,5 +164,5 @@ function addResource(id) {
 }
 
 if(typeof exports !== 'undefined') {
-    exports.createResources = createResources;
+    exports.Agent = Agent;
 }
