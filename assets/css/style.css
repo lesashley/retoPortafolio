@@ -2,34 +2,32 @@
   display: none;
   width: 65%;
   vertical-align: top;
-  padding-top: 40px;
-  padding-left: 5%;
+  padding-top: 20px;
+  padding-left: 2%;
 
 }
 #zlash2{
   display: none;
   width: 65%;
-  /*width: 1000px*/
   vertical-align: top;
-  padding-top: 40px;
-  padding-left: 5%;
+  padding-top: 20px;
+  padding-left: 2%;
 
 }
 #zlash3{
   display: inline-block;
-  /*width: 1000px;*/
   width: 65%;
   vertical-align: top;
   padding-top: 20px;
-  padding-left: 5%;
+  padding-left: 2%;
 
 }
 #zlash4{
   display: none;
   width: 65%;
   vertical-align: top;
-  padding-top: 40px;
-  padding-left: 5%;
+  padding-top: 20px;
+  padding-left: 2%;
 
 }
 span.figura{
@@ -40,9 +38,10 @@ span.figura{
 }
 .texto{
   width: 640px;
-  float: right;
+  float: left;
   /*margin: 5px;*/
   padding: 5px;
+  padding-left: 7%;
 }
 
 body{
@@ -86,6 +85,12 @@ body{
     padding: 3px 10px 3px 10px;
 }
 
+#lash li:hover {
+ background: #474343;
+ color: black;
+ /*box-shadow: inset 0 0 0 3px #474343;*/
+}
+
 #lash a:link{
     text-decoration: none;
     color: black;
@@ -105,9 +110,8 @@ body{
 #lateral{
   float: right;
   padding: 10px;
-  /*margin: 10px;*/
   width: 25%;
-  height: 500px;
+  height: 495px;
   display: inline-block;
   background: white;
   /*border-radius: 2px;*/
@@ -126,46 +130,43 @@ span.circulo{
   border-radius: 40px;
 }
 body{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
+  font-family: 'Droid Sans', sans-serif;
 }
 
 
 div.Idle{
-    padding: 5px;
+    padding: 9px;
     /*background: #acff9e;*/
-    background: #b4ffaa;
+    background: #cce8b5;
 		border: 3px solid gray;
     border-radius:15px;
-    width: 95%;
+    width: 760px;
     height: 60px;
     margin: 10px;
 }
 
 div.Building{
-    padding: 5px;
-    background: #f8ffaf;
+    padding: 9px;
+    background: #fffbb9;
     height: 60px;
 		border: 3px solid gray;
     border-radius:15px;
-    width: 95%;
+    width: 760px;
     margin: 10px;
 }
-/*div.botonesSuperiores{
-  background: gray;
-}*/
+
 .boton{
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
+  font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
   background: #a0a39e;
-  /*padding: 5px;*/
   margin: 3px;
   border-radius: 13px 13px 13px 13px;
   border-color: black;
   padding-left: 18px;
   padding-right: 18px;
-  /*margin-left: 5px;*/
-  /*margin-right: 5px;*/
   height: 40px;
 }
 
@@ -173,7 +174,8 @@ div.Building{
   font-family: 'Poppins', sans-serif;
   background: #cccccc;
   border-radius: 6px 6px 6px 6px;
-  height: 25px;
+  height: 24px;
+  width: 25px;
   font-weight: 900;
   font-size: 15px;
 }
@@ -203,6 +205,10 @@ div.Building{
 
 .gray{
   width: 100%;
-  background: #434743;
+  background: #606060;
   height: 80px;
+}
+
+.info{
+  height: 7px;
 }

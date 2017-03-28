@@ -52,22 +52,26 @@ function createElements() {
     circle.setAttribute("class","circulo");
     var conteiner = document.createElement('span');
     conteiner.setAttribute("class","texto");
-    var agent = document.createElement('span');
-    agent.innerHTML= e.url + " | " + e.type + " | " + e.ip + " | " + e.ruta;
+    var agent = document.createElement('div');
+    agent.setAttribute("class","info");
+    agent.innerHTML= e.url.bold() + " | " + e.type + " | " + e.ip + " | " + e.ruta;
     var espacio = document.createElement("br");
     var a = document.createElement('a');
     a.setAttribute("id","sr"+sp);
     a.setAttribute("href","javascript:showTooltip("+sp+");");
 		a.setAttribute("class","tooltip");
     sp++;
-    a.innerHTML="+"+"Specify Resources";
+    a.innerHTML="+".fontcolor("black").bold()+"Specify Resources".fontcolor("black");
 		//Tooltip
 		var tooltip = document.createElement("div");
 		tooltip.setAttribute("class","tooltiptext");
 		tooltip.setAttribute("id","span"+idTooltip);
+    tooltip.innerHTML="(separate multiple resources name with commas)";
 		var input = document.createElement("input");
 		input.setAttribute("type","text");
 		input.setAttribute("id","txt"+idTooltip);
+    input.setAttribute("style","width:340px");
+    var btnEspacio = document.createElement("br");
 		var addButton = document.createElement("button");
 		addButton.setAttribute("class","rounded");
 		addButton.setAttribute("id","agregar"+idTooltip);
@@ -83,6 +87,7 @@ function createElements() {
     })
 		idTooltip++;
     var conteinerRes = document.createElement('span');
+    conteinerRes.innerHTML="| Resources: ";
     conteinerRes.setAttribute("id","resultado" + idRes);
     idRes++;
     mostrar.appendChild(panel);
@@ -95,6 +100,7 @@ function createElements() {
     conteiner.appendChild(conteinerRes);
 		a.appendChild(tooltip);
 		tooltip.appendChild(input);
+    tooltip.appendChild(btnEspacio);
 		tooltip.appendChild(addButton);
 		tooltip.appendChild(closeButton);
 		var numAgent = e.id;
@@ -108,7 +114,8 @@ function createElements() {
 			var deleteResource = document.createElement('button');
 			deleteResource.setAttribute("class","botones");
 			deleteResource.setAttribute("id","b");
-			deleteResource.innerHTML = "x";
+			deleteResource.innerHTML = "x".fontcolor("gray");
+      //deleteResource.fontcolor("gray");
 			deleteResource.addEventListener("click",function(e) {
 				var postParent = e.target.parentNode;
 				postParent.removeChild(span);
@@ -155,22 +162,20 @@ function showTooltip(id){
 }
 
 function addResource(id) {
-	var idEnlace = document.getElementById("sr"+id);
 	var span = document.getElementById('span'+id);
 	var resultado = document.getElementById("resultado" + id);
-	var text = document.getElementById("txt"+id).value;
-	if (text == "") {
-		alert("Debe ingresar mínimo un recurso");
+	var text = document.getElementById("txt"+id);
+	if (text.value == "") {
+		alert("Debe ingresar como mínimo un recurso");
 	} else {
-		var data = text.split(",");
+		var data = text.value.split(",");
 		data.forEach(function (e) {
 			agentes.addResource(id,e);
 			resultado.appendChild(createResources(e,id));
 		});
 	}
-	var input = document.getElementById("txt"+id);
-  input.value="";
 	span.classList.remove("tooltipText.nuevo");
+  text.value="";
 }
 
 if(typeof exports !== 'undefined') {

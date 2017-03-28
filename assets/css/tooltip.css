@@ -2,17 +2,19 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted #c6d1c6; 
+    border-bottom: 1px dotted #c6d1c6;
 }
 
 /* Tooltip text */
 .tooltiptext {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 0.875em;
     display: none;
     background-color: #c6d1c6;
     color: black;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
+    border-radius: 7px;
     position: absolute;
     z-index: 1;
 }
@@ -39,8 +41,13 @@
 }
 .rounded{
   border-radius: 10px 10px 10px 10px;
-  border-color: black;
-
+  border-color: gray;
+  margin: 5px;
+  /*box-shadow: 2px 2px;*/
+  float: left;
+  background: #c9c9c9;
+  color: black;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,0.4);
 }
 
 .tooltiptext.nuevo{
