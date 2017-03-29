@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <form action="">
+    <form action="" onsubmit="return false">
 
       <div class="imgcontainer">
         <img src="assets/img/avatarLogin.png" alt="Avatar" class="avatar">
       </div>
 
       <div class="container">
-        <label>Username</label>
-        <input type="" placeholder="Enter Username" id="uName" required>
+        <label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input class="login" type="email" placeholder="Enter Username"  required="">
         <br>
         <label>Password</label>
-        <input type="password" placeholder="Enter password" id="psw" required>
+        <input class="login" type="password" placeholder="Enter password" required>
         <br>
-        <button type="submit">Login</button>
+        <button type="submit" id ="login" >Login</button>
+        <br>
+        <span id="errorMessage" class="container">
+        </span>
       </div>
 
       <div class="container" >
         <a href="newUser.html">New user</a>
       </div>
+
     </form>
-      <script type="text/javascript" src="assets/js/main.js">
+      <script type="text/javascript" src="assets/js/login.js">
 
       </script>
   </body>

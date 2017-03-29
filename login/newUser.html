@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <form action="">
+    <form action="" onsubmit="return false">
 
       <div class="imgcontainer">
         <img src="assets/img/avatarLogin.png" alt="Avatar" class="avatar">
@@ -16,26 +16,30 @@
 
       <div class="container">
         <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input type="text" placeholder="Enter name" id="name" required>
+        <input class="register" type="text" placeholder="Enter name" id="name" required>
         <br>
 
         <label>Last Name</label>
-        <input type="text" placeholder="Enter last name" id="lName" required>
+        <input class="register" type="text" placeholder="Enter last name" id="lName" required>
         <br>
 
         <label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input type="email" placeholder="Enter email" id="email" required>
+        <input class="register" type="email" placeholder="Enter email" id="email" required>
         <br>
 
         <label>Password&nbsp;&nbsp;</label>
-        <input type="password" placeholder="Enter Password" id="nPsw" required>
+        <input class="register" type="password" placeholder="Enter Password" id="nPsw" required>
         <br>
-        <button type="submit">Register</button>
+        <button type="submit" id="register">Register</button>
+        <br>
+        <span id="errorMessage" class="container"></span>
+
       </div>
+
 
     </form>
 
-    <script type="text/javascript" src="">
+    <script type="text/javascript" src="assets/js/newUser.js">
 
     </script>
   </body>
