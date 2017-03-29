@@ -129,14 +129,12 @@ span.circulo{
   border-radius: 40px;
 }
 body{
-  /*font-family: 'Poppins', sans-serif;*/
   font-family: 'Droid Sans', sans-serif;
 }
 
 
 div.Idle{
     padding: 9px;
-    /*background: #acff9e;*/
     background: #cce8b5;
 		border: 3px solid gray;
     border-radius:15px;
@@ -157,7 +155,6 @@ div.Building{
 
 .boton{
   font-size: 15px;
-  /*font-family: 'Poppins', sans-serif;*/
   font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
   background: #a0a39e;
