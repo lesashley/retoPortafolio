@@ -1,3 +1,6 @@
+
+var urlActual = window.location.search;
+console.log(urlActual);
 var nuevoArray;
 var arrayAgentes = [];
 function Agent() {

@@ -23,7 +23,7 @@ document.getElementById('register').addEventListener("click",function(){
   else if(inputsRegister[3].value == "" ){
     messageErrorRegister.innerHTML = "Don't accept empty fields";
   }
-  else if(inputsRegister[1].value.length < 6 || inputsRegister[1].value == "password") {
+  else if(inputsRegister[3].value.length < 6 || inputsRegister[3].value == "password") {
     messageErrorRegister.innerHTML="Use more than six characters";
   }
   else {

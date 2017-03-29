@@ -1,6 +1,6 @@
 var inputsLogin = document.getElementsByClassName('login');
 var messageErrorLogin = document.getElementById('errorMessage');
-
+var nombre;
 document.getElementById('login').addEventListener("click",function(){
   if(inputsLogin[0].value == "" ){
     messageErrorLogin.innerHTML = "Don't accept empty fields";
@@ -17,7 +17,8 @@ document.getElementById('login').addEventListener("click",function(){
   else if(inputsLogin[0].value != "" && inputsLogin[1].value != ""){
     usersCruise.forEach(function (e) {
       if (inputsLogin[0].value == e.email && inputsLogin[1].value == e.password) {
-        window.location="../index.html";
+        nombre=e.name;
+        window.location = "index.html" + "?nombre=" +nombre;
       } else{
         messageErrorLogin.innerHTML="Wrong email and password";
       }
