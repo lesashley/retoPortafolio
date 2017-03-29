@@ -6,44 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/login.css">
   </head>
   <body>
-    <form action="" onsubmit="return false">
-
+    <form action="" onsubmit="return false" class="form">
       <div class="imgcontainer">
         <img src="assets/img/avatarLogin.png" alt="Avatar" class="avatar">
       </div>
-
       <div class="container">
         <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input class="register" type="text" placeholder="Enter name" id="name" required>
+        <input class="register" type="text" placeholder="Enter name" id="name" required autofocus="">
         <br>
-
         <label>Last Name</label>
         <input class="register" type="text" placeholder="Enter last name" id="lName" required>
         <br>
-
         <label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input class="register" type="email" placeholder="Enter email" id="email" required>
         <br>
-
         <label>Password&nbsp;&nbsp;</label>
         <input class="register" type="password" placeholder="Enter Password" id="nPsw" required>
         <br>
         <button type="submit" id="register">Register</button>
         <br>
-        <span id="errorMessage" class="container"></span>
-
+        <span id="errorMessage" class="container" style="color:red"></span>
       </div>
-
-
     </form>
-    <script type="text/javascript" src="assets/js/users.js">
-
-    </script>
-    <script type="text/javascript" src="assets/js/newUser.js">
-
-    </script>
+    <script type="text/javascript" src="assets/js/users.js"></script>
+    <script type="text/javascript" src="assets/js/newUser.js"></script>
   </body>
 </html>
